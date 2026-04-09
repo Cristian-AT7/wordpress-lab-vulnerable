@@ -1,31 +1,53 @@
-# wordpress-lab-vulnerable
+# Wordpress-Lab-Vulnerable
 
 # WordPress Vulnerable Lab (Docker)
 
 ## 🎯 Objetivo
-Realizar pruebas de seguridad en un entorno controlado de WordPress desplegado mediante Docker.
+Realizar una evaluación de seguridad sobre una instancia vulnerable de WordPress desplegada en un entorno controlado, con el fin de identificar y explotar vulnerabilidades conocidas.
 
 ## 🧱 Entorno
-- WordPress vulnerable (Dockerlabs)
+- Aplicación vulnerable obtenida desde Dockerlabs.es
+- Despliegue mediante Docker
 - Sistema atacante: Kali Linux
-- Red: entorno local aislado
+- Red local aislada
 
 ## ⚠️ Disclaimer
-Este laboratorio fue realizado en un entorno controlado y autorizado con fines educativos.
+Este laboratorio fue realizado en un entorno controlado y autorizado con fines estrictamente educativos.
+
+## 🚀 Despliegue del laboratorio
+1. Descarga del entorno vulnerable desde Dockerlabs
+
+## 🛠️ Herramientas utilizadas
+- Nmap (reconocimiento de red)
+- WPScan (enumeración de WordPress)
+- Netcat (Hailitar puerto para escucha)
+- Exploit público basado en CVE
+- Reverse shell (payload web)
 
 ## 🔍 Reconocimiento
-- Enumeración e Identificación de servicios con nmap
+- Escaneo de puertos con Nmap para identificar servicios activos
+- Identificación de WordPress como CMS en ejecución
+- Enumeración de usuarios y plugins con WPScan
+
+## 📌 Análisis de vulnerabilidades
+- Identificación de plugin vulnerable: Pie Register
+- Búsqueda de vulnerabilidad asociada mediante CVE
+- Confirmación de que la versión instalada es vulnerable
 
 ## 🚪 Explotación
-- Detección de plugin vulnerable
-- Ejecución de ataque (describir aquí lo que hiciste)
+- Uso de exploit público dirigido a la vulnerabilidad de Pie Register
+- Manipulación de cookies para suplantación de sesión administrativa
+- Acceso no autorizado al panel de administración de WordPress
 
 ## 🧑‍💻 Post-explotación
-- Acceso al panel admin / shell (si aplica)
+- Carga de reverse shell en el servidor
+- Establecimiento de conexión remota usando Netcat
+- Obtención de acceso al sistema desde la máquina atacante
 
 ## 🛡️ Mitigación
-- Actualización de plugins vulnerables
-- Hardening de WordPress
-- Uso de WAF
+- Actualización del plugin vulnerable a su última versión
+- Eliminación de plugins no confiables
+- Implementación de controles de autenticación seguros
+- Uso de firewall de aplicaciones web (WAF)
 
 ## 📸 Evidencias
